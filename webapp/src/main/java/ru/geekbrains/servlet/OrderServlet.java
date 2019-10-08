@@ -12,5 +12,6 @@ public class OrderServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().printf("<h1>%s</h1>","Заказы");
+        resp.getWriter().flush();
     }
 }
