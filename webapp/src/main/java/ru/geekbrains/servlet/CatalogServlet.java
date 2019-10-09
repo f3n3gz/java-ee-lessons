@@ -12,8 +12,6 @@ import java.io.Serializable;
 public class CatalogServlet extends HttpServlet implements Serializable {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().printf("<h1>%s</h1>","Каталог");
-        resp.getWriter().flush();
-        resp.getWriter().close();
+        req.getRequestDispatcher("WEB-INF/templates/catalog.jsp").forward(req,resp);
     }
 }
